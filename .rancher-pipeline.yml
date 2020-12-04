@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ssxs/ssxs-centos7:${CICD_EXECUTION_SEQUENCE}
+      tag: ssxs-docker/ssxs-repo/ssxs-centos7:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: registry-vpc.cn-shenzhen.aliyuncs.com
 timeout: 60
