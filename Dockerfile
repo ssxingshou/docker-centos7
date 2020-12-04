@@ -16,9 +16,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 	#设置终端颜色
 	&& echo 'export PS1="\[\e]0;\a\]\n\[\e[1;32m\]\[\e[1;33m\]\H\[\e[1;35m\]<\$(date +\"%Y-%m-%d %T\")> \[\e[32m\]\w\[\e[0m\]\n\u>\\$ "' >> /etc/profile \
 	&& source /etc/profile
-	
-# 更换Aliyun的镜像源 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak \
-# 常用命令安装 && curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo \
+
+# 常用命令安装
 RUN yum makecache \
     && yum -y update \
     && yum install -y wget vim telnet less net-tools
