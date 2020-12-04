@@ -17,10 +17,10 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 	&& echo 'export PS1="\[\e]0;\a\]\n\[\e[1;32m\]\[\e[1;33m\]\H\[\e[1;35m\]<\$(date +\"%Y-%m-%d %T\")> \[\e[32m\]\w\[\e[0m\]\n\u>\\$ "' >> /etc/profile \
 	&& source /etc/profile
 	
-# 更换Aliyun的镜像源
+# 更换Aliyun的镜像源 
+# 常用命令安装
 RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak \
     && curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo \
     && yum makecache \
     && yum -y update \
-    # 常用命令安装
     && yum install -y wget vim telnet less net-tools
