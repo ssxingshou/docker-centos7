@@ -6,6 +6,6 @@ stages:
       buildContext: .
       tag: ssxs-docker/ssxs-repo/ssxs-centos7:${CICD_EXECUTION_SEQUENCE}
       #pushRemote: true
-      #registry: registry.cn-shenzhen.aliyuncs.com
+      registry: registry.cn-shenzhen.aliyuncs.com
 timeout: 60
 notification: {}
