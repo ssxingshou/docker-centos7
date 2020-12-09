@@ -1,5 +1,5 @@
 # Centos系统镜像初始化配置
-FROM centos:7.6.1810
+FROM centos:7.9.2009
 
 MAINTAINER Base Image Centos <haixiang.dai@ssxingshou.com>
 
